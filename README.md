@@ -7,7 +7,7 @@ This project demonstrates a clean UI for displaying sneaker products with smooth
 
 ## 🚀 Live Demo
 
-https://your-deploy-link.com
+
 
 ---
 
