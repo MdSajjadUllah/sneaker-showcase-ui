@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 0% 40%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 13%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 0 0% 40%;
+
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Metallic gradients */
+    --gradient-metallic: linear-gradient(135deg, hsl(0 0% 20%), hsl(0 0% 8%), hsl(0 0% 22%), hsl(0 0% 6%));
+    --gradient-metallic-light: linear-gradient(135deg, hsl(0 0% 95%), hsl(0 0% 75%), hsl(0 0% 90%), hsl(0 0% 80%));
+    --gradient-metallic-border: linear-gradient(135deg, hsl(0 0% 35%), hsl(0 0% 15%), hsl(0 0% 40%), hsl(0 0% 10%));
+    --gradient-metallic-text: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 65%), hsl(0 0% 90%), hsl(0 0% 70%));
+    --gradient-metallic-btn: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 82%), hsl(0 0% 95%));
+    --gradient-metallic-btn-hover: linear-gradient(135deg, hsl(0 0% 90%), hsl(0 0% 70%), hsl(0 0% 85%));
+    --gradient-gold: linear-gradient(135deg, hsl(43 70% 60%), hsl(43 50% 45%), hsl(43 65% 55%));
+
+    /* Shadows */
+    --shadow-neumorphic: 10px 10px 20px hsl(0 0% 2%), -6px -6px 16px hsl(0 0% 12%);
+    --shadow-neumorphic-hover: 14px 14px 28px hsl(0 0% 1%), -8px -8px 20px hsl(0 0% 14%);
+    --shadow-neumorphic-inset: inset 4px 4px 8px hsl(0 0% 3%), inset -4px -4px 8px hsl(0 0% 11%);
+    --shadow-glow: 0 0 40px hsl(0 0% 100% / 0.06);
+    --shadow-glow-strong: 0 0 60px hsl(0 0% 100% / 0.12);
+    --shadow-metallic: 0 8px 32px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(0 0% 100% / 0.05);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: 0.05em;
+  }
+
+  ::selection {
+    background: hsl(0 0% 100% / 0.15);
+    color: hsl(0 0% 100%);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-metallic-text);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .metallic-surface {
+    background: var(--gradient-metallic);
+    box-shadow: var(--shadow-metallic);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+  }
+
+  .metallic-border {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+  .metallic-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-metallic-border);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .neumorphic {
+    background: var(--gradient-metallic);
+    box-shadow: var(--shadow-neumorphic);
+    border-radius: var(--radius);
+    border: 1px solid hsl(0 0% 100% / 0.04);
+  }
+
+  .neumorphic-hover {
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+  }
+  .neumorphic-hover:hover {
+    box-shadow: var(--shadow-neumorphic-hover), var(--shadow-glow);
+    transform: translateY(-8px);
+    border-color: hsl(0 0% 100% / 0.1);
+  }
+
+  .neumorphic-inset {
+    box-shadow: var(--shadow-neumorphic-inset);
+    border-radius: var(--radius);
+  }
+
+  .glass {
+    background: hsl(0 0% 6% / 0.85);
+    backdrop-filter: blur(24px) saturate(1.2);
+    border-bottom: 1px solid hsl(0 0% 100% / 0.06);
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-strong {
+    box-shadow: var(--shadow-glow-strong);
+  }
+
+  .btn-metallic {
+    background: var(--gradient-metallic-btn);
+    color: hsl(0 0% 5%);
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .btn-metallic:hover {
+    background: var(--gradient-metallic-btn-hover);
+    box-shadow: 0 0 30px hsl(0 0% 100% / 0.15);
+  }
+  .btn-metallic::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 40%, hsl(0 0% 100% / 0.1) 50%, transparent 60%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  .btn-metallic:hover::after {
+    transform: translateX(100%);
+  }
+
+  .btn-outline-metallic {
+    border: 1px solid hsl(0 0% 30%);
+    background: transparent;
+    color: hsl(0 0% 90%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-metallic:hover {
+    border-color: hsl(0 0% 50%);
+    background: hsl(0 0% 100% / 0.05);
+    box-shadow: 0 0 20px hsl(0 0% 100% / 0.05);
+  }
+
+  .gradient-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 30%), transparent);
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 30%, hsl(0 0% 100% / 0.06) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes ripple-effect {
+    0% { transform: scale(0); opacity: 0.4; }
+    100% { transform: scale(4); opacity: 0; }
+  }
+}
