@@ -1,73 +1,131 @@
-# Welcome to your Lovable project
+# Sneaker Showcase UI 👟
 
-## Project info
+A modern and responsive sneaker showcase web application built with **React, TypeScript, Vite, and TailwindCSS**.  
+This project demonstrates a clean UI for displaying sneaker products with smooth animations and reusable component architecture.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+https://your-deploy-link.com
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 📸 Preview
 
-Changes made via Lovable will be committed automatically to this repo.
+### Landing Page
+![Landing Page](screenshots/landing.png)
 
-**Use your preferred IDE**
+### Product Showcase
+![Products](screenshots/products.png)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Features
 
-Follow these steps:
+- Modern sneaker product showcase interface
+- Fully responsive design
+- Smooth UI animations
+- Modular React component architecture
+- Fast build system using Vite
+- Clean and scalable folder structure
+- TailwindCSS utility styling
+- Reusable UI components with shadcn/ui
+- React Router navigation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠 Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Frontend
+- React 18
+- TypeScript
+- Vite
+- TailwindCSS
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### UI Libraries
+- shadcn/ui
+- Radix UI
+- Framer Motion
+
+### Other Libraries
+- React Router
+- React Query
+- Zod
+- React Hook Form
+- Recharts
+
+### Development Tools
+- ESLint
+- Vitest
+- PostCSS
+
+---
+
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```
+git clone https://github.com/mdsajjadullah/sneaker-showcase-ui.git
+```
+
+Go to project folder
+
+```
+cd sneaker-showcase-ui
+```
+
+Install dependencies
+
+```
+npm install
+```
+
+Start development server
+
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏗 Build for Production
 
-**Use GitHub Codespaces**
+```
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Preview production build
 
-## What technologies are used for this project?
+```
+npm run preview
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🧪 Testing
 
-## How can I deploy this project?
+Run tests
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```
+npm run test
+```
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 👨‍💻 Author
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Sajjad
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+GitHub:  
+https://github.com/mdsajjadullah
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
