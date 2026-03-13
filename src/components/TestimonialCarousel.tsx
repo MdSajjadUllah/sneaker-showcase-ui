@@ -4,35 +4,34 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Marcus J.',
+    name: 'Sajid Arefin Saad',
     role: 'Marathon Runner',
     text: "These are hands down the best running shoes I've ever owned. The cushioning is unreal and they look incredible on the track.",
     rating: 5,
     avatar: 'MJ',
   },
   {
-    name: 'Aisha K.',
+    name: 'Maisha Noor',
     role: 'Streetwear Designer',
     text: "The design language is on another level. I get compliments every single time I wear them. Perfect blend of form and function.",
     rating: 5,
     avatar: 'AK',
   },
   {
-    name: 'Carlos R.',
+    name: 'Udoy Rebeiro',
     role: 'Fitness Coach',
     text: "I train 6 days a week and these hold up beautifully. The support is phenomenal and the breathability keeps my feet cool.",
     rating: 5,
     avatar: 'CR',
   },
   {
-    name: 'Elena V.',
+    name: 'Shahadat Hossain',
     role: 'Sneaker Collector',
     text: "After 200+ pairs, I can confidently say this is the most premium sneaker experience I've had. Worth every penny.",
     rating: 5,
     avatar: 'EV',
   },
 ];
-
 export function TestimonialCarousel() {
   const [current, setCurrent] = useState(0);
 
