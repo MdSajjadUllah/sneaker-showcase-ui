@@ -53,7 +53,7 @@ export function FeaturedSection() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center justify-center px-10 py-4 btn-metallic font-body text-sm uppercase tracking-[0.2em] rounded-full"
             >
-              Shop Now — $219
+              Shop Now — 12000TK
             </motion.a>
           </motion.div>
 
