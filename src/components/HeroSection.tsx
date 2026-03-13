@@ -81,6 +81,20 @@ export function HeroSection() {
         </motion.div>
       </div>
 
+      {/* Scroll indicator */}
+      <motion.div
+        animate={{ y: [0, 8, 0] }}
+        transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
+        <div className="w-5 h-9 rounded-full border border-foreground/20 flex items-start justify-center p-1.5">
+          <motion.div
+            animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+            transition={{ repeat: Infinity, duration: 2.5, ease: 'easeInOut' }}
+            className="w-1 h-1 rounded-full bg-foreground/50"
+          />
+        </div>
+      </motion.div>
      
     </section>
   );
