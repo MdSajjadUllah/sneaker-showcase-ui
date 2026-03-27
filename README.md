@@ -11,15 +11,6 @@ This project demonstrates a clean UI for displaying sneaker products with smooth
 
 ---
 
-## 📸 Preview
-
-### Landing Page
-![Landing Page](screenshots/landing.png)
-
-### Product Showcase
-![Products](screenshots/products.png)
-
----
 
 ## ✨ Features
 
